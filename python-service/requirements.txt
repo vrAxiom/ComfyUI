@@ -1,0 +1,9 @@
+flask==3.0.0
+flask-cors==4.0.0
+requests==2.31.0
+pandas==2.1.4
+openpyxl==3.1.2
+python-dotenv==1.0.1
+jsonschema==4.22.0
+# Windows-only watcher dependency
+pywin32==306; platform_system == "Windows"

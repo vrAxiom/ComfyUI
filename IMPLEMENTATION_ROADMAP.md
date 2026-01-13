@@ -547,8 +547,12 @@ def prepare_data_for_excel(data: dict) -> dict:
     if data.get("current_ctc_lpa") is not None:
         data["current_ctc_lpa"] = round(float(data["current_ctc_lpa"]), 1)
     
-    if data.get("offers_in_hand") is not None:
-        data["offers_in_hand"] = bool(data["offers_in_hand"])
+    if data.get("offer_in_hand_lpa") is not None:
+      try:
+        val = float(data["offer_in_hand_lpa"]) if data["offer_in_hand_lpa"] != "" else None
+      except (ValueError, TypeError):
+        val = None
+      data["offer_in_hand_lpa"] = round(val, 1) if (val is not None and val > 0) else None
     
     return data
 ```

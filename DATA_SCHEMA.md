@@ -1064,7 +1064,7 @@ def validate_extracted_data(data: dict) -> dict:
 | date_of_birth | Date | DD/MM/YYYY |
 | mobile | Phone | +91 format |
 | email | Email | Clickable link |
-| offers_in_hand | Yes/No | Checkbox |
+| offer_in_hand_lpa | Number | Decimal (1 place) |
 | ingested_at | DateTime | DD/MM/YYYY HH:MM |
 | email_subject | Text | Plain |
 | from_email | Email | Clickable link |
